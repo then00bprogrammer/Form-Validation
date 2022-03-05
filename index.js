@@ -6,7 +6,7 @@ let validName=true;
 let validEmail=true;
 let validPhone=true;
 $('#failure').hide();
-$('#success').show();
+$('#success').hide();
 name1.addEventListener('blur',()=>{
     console.log("name is blurred");
     //Validating name
@@ -73,6 +73,10 @@ submit.addEventListener('click',(e)=>{
     success.classList.add('show');
     $('#failure').hide();
     $('#success').show();
+                setTimeout(() => {
+            $('#failure').hide();
+            $('#success').hide();  
+        }, 3000);   
 }
     else{
         failure=document.getElementById('failure');
@@ -80,7 +84,10 @@ submit.addEventListener('click',(e)=>{
         failure.classList.add('show');
         $('#success').hide();
         $('#failure').show();
-
+                setTimeout(() => {
+            $('#failure').hide();
+            $('#success').hide();  
+        }, 3000);   
         
     }  
     }
